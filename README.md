@@ -1,2 +1,3 @@
-# isafety
-Toolset to examine iDevices for Security / Safety Threats
+# iSafety
+Toolset to examine iDevices for Security / Safety Threats.
+
