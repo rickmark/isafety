@@ -32,3 +32,21 @@ if watch_backups:
     print("Backup contains managed preferences")
     for preference in managed_preferences:
         print(f"\t{preference}")
+
+carrier_settings = scanner.get_carrier_settings()
+if carrier_settings:
+    print("Backup has explicit cellular configuration")
+    for setting in carrier_settings:
+        print(f"\t{setting}")
+
+bluetooth_settings = scanner.get_bluetooth_pairings()
+if bluetooth_settings:
+    print("Backup has explicit bluetooth pairings")
+    for setting in bluetooth_settings:
+        print(f"\t{setting}")
+
+disabled_services_settings = scanner.get_disabled_services()
+if disabled_services_settings:
+    print("Backup has launchd services disabled")
+    for service in disabled_services_settings:
+        print(f"\t{service}")
