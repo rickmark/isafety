@@ -13,3 +13,22 @@ if profiles:
     print("Backup contains configuration profiles:")
     for profile in profiles:
         print(f"\t{profile}")
+
+provisionings = scanner.get_provisioning()
+if provisionings:
+    print("Backup contains provisioning profiles:")
+    for provisioning in provisionings:
+        print(f"\t{provisioning}")
+
+
+watch_backups = scanner.get_watch_backups()
+if watch_backups:
+    print("Backup contains watch backups")
+    for watch_backup in watch_backups:
+        print(f"\t{watch_backup}")
+
+managed_preferences = scanner.get_managed_preferences()
+if watch_backups:
+    print("Backup contains managed preferences")
+    for preference in managed_preferences:
+        print(f"\t{preference}")
