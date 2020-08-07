@@ -9,6 +9,7 @@ MANAGED_PREFERENCE_REGEX = re.compile('.plist$')
 CARRIER_REGEX = re.compile('Library/Preferences/com.apple.carrier')
 OPERAATOR_REGEX = re.compile('Library/Preferences/com.apple.operator')
 
+
 class BackupScanner(object):
     def __init__(self, backup: LocalBackup):
         self.backup = backup
@@ -93,14 +94,13 @@ class BackupScanner(object):
             if 'Library/Preferences/com.apple.operator' in file.relative_path:
                 result.append(file.relative_path)
 
-
         if len(result) == 0:
             return None
         return result
 
+
     def get_wifi_settings(self):
         result = []
-
 
         if len(result) == 0:
             return None
