@@ -1,0 +1,2 @@
+class ScannerBase(object):
+    pass
