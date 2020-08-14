@@ -1,4 +1,4 @@
-from .libibackup import LocalBackup
+from libimobiledevice.libibackup import *
 from plistlib import *
 import asn1
 import re
@@ -98,6 +98,16 @@ class BackupScanner(object):
             return None
         return result
 
+    def get_pairing_records(self):
+        result = []
+        for file in self.backup.files_in_domain('HomeDomain'):
+            if 'Library/Preferences/com.apple.mobile.ldpair.plist' in file.relative_path:
+                full_path = self.backup.get_path_by_id(file.file_id)
+                with open(full_path, "rb") as data_file:
+                    data = loads(data_file.read())
+                    for key in data.keys():
+                        result.append(key)
+        return result
 
     def get_wifi_settings(self):
         result = []

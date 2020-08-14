@@ -1,12 +1,19 @@
 #!/usr/bin/env python
 
-from backup.libibackup import LocalBackup
 from backup.backup_scanner import *
+from libimobiledevice.libibackup import LocalBackup
 import sys
 
 backup = LocalBackup(sys.argv[1])
 
 scanner = BackupScanner(backup)
+
+pairings = scanner.get_pairing_records()
+if pairings:
+    print("Backup contains iTunes Pairing records:")
+    for pairing in pairings:
+        print(f"\t{pairing}")
+
 
 profiles = scanner.get_profiles()
 if profiles:
