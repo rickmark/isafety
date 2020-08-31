@@ -10,6 +10,7 @@ pytest-describe = "*"
 [packages]
 deepdiff = "*"
 libimobiledevice = "*"
+pyopenssl = "*"
 
 [requires]
 python_version = "3.8"

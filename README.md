@@ -5,6 +5,7 @@ Toolset to examine iDevices for Security / Safety Threats.
 
 * only tested on macOS - but should work on linux
 * `libibackup` from https://github.com/rickmark/libibackup
+* OpenSSL from homebrew (`brew install openssl`)
 * un-encrypted backup from an iPhone
 * Python 3
 * pip / pipenv
