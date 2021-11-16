@@ -14,3 +14,8 @@ Toolset to examine iDevices for Security / Safety Threats.
 
 * `pipenv install`
 * `./scan_backup.py <path_to_backup_directory>`
+
+
+# Dedication
+
+This project is dedicated to my ex-boyfriends.  They were often horiable people, and felt the right to victimze others.  I wish I had seen at the time the kinds of people I attracted, but if I can help another escape this violance this code has meaning to me.
