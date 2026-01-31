@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from backup.backup_scanner import *
 from libimobiledevice.libibackup import LocalBackup
 import sys
 

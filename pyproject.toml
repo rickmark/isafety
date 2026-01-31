@@ -1,0 +1,21 @@
+[project]
+name = "isafety"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "archivey>=0.1.0a4",
+    "deepdiff>=8.6.1",
+    "jmespath>=1.1.0",
+    "jsonq>=3.0.3",
+    "libimobiledevice>=0.4",
+    "pyasn1>=0.6.2",
+    "pyopenssl>=25.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-describe>=3.1.0",
+]
