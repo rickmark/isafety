@@ -1,0 +1,700 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "activeAccount": {
+      "type": "string"
+    },
+    "containerName": {
+      "type": "string"
+    },
+    "contextDump": {
+      "type": "object",
+      "properties": {
+        "accountSettings": {
+          "type": "object",
+          "properties": {
+            "walrus": {
+              "type": "object",
+              "properties": {
+                "clock": {
+                  "type": "integer"
+                },
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "clock",
+                "value"
+              ]
+            },
+            "webAccess": {
+              "type": "object",
+              "properties": {
+                "clock": {
+                  "type": "integer"
+                },
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "clock",
+                "value"
+              ]
+            }
+          },
+          "required": [
+            "walrus",
+            "webAccess"
+          ]
+        },
+        "accountSettingsDate": {
+          "type": "string"
+        },
+        "bottles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "bottleID": {
+                "type": "string"
+              },
+              "peerID": {
+                "type": "string"
+              },
+              "signatureUsingPeerKey": {
+                "type": "string"
+              },
+              "signatureUsingSPKI": {
+                "type": "string"
+              },
+              "signingSPKI": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "bottleID",
+              "peerID",
+              "signatureUsingPeerKey",
+              "signatureUsingSPKI",
+              "signingSPKI"
+            ]
+          }
+        },
+        "custodian_recovery_keys": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "distrusted_by_self": {
+                "type": "boolean"
+              },
+              "encryption_public_key": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "peerID": {
+                "type": "string"
+              },
+              "signing_public_key": {
+                "type": "string"
+              },
+              "uuid": {
+                "type": "string"
+              },
+              "trusted_by_self": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "encryption_public_key",
+              "kind",
+              "peerID",
+              "signing_public_key",
+              "uuid"
+            ]
+          }
+        },
+        "distrustedEgoSponsoredBeneficiaryIDs": {
+          "type": "array"
+        },
+        "egoSponsoredBeneficiaryIDs": {
+          "type": "array"
+        },
+        "honorIDMSListChanges": {
+          "type": "string"
+        },
+        "idmsTrustedDeviceListFetchDate": {
+          "type": "string"
+        },
+        "idmsTrustedDevicesVersion": {
+          "type": "string"
+        },
+        "machineIDsAllowed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "machineIDsDisallowed": {
+          "type": "array"
+        },
+        "machineIDsEvicted": {
+          "type": "array"
+        },
+        "machineIDsGhostedFromTDL": {
+          "type": "array"
+        },
+        "machineIDsUnknownReason": {
+          "type": "array"
+        },
+        "peers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "dynamicInfo": {
+                "type": "object",
+                "properties": {
+                  "clock": {
+                    "type": "integer"
+                  },
+                  "included": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "dispositions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "disposition": {
+                          "type": "object",
+                          "properties": {
+                            "unknownMachineID": {
+                              "type": "object"
+                            },
+                            "disallowedMachineID": {
+                              "type": "object"
+                            },
+                            "ghostedMachineID": {
+                              "type": "object"
+                            },
+                            "duplicateMachineID": {
+                              "type": "object"
+                            },
+                            "unknownReasonRemovalMachineID": {
+                              "type": "object"
+                            }
+                          }
+                        },
+                        "peerID": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "disposition",
+                        "peerID"
+                      ]
+                    }
+                  },
+                  "excluded": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "clock"
+                ]
+              },
+              "peerID": {
+                "type": "string"
+              },
+              "permanentInfo": {
+                "type": "object",
+                "properties": {
+                  "creation_time": {
+                    "type": "integer"
+                  },
+                  "encryption_pub_key": {
+                    "type": "string"
+                  },
+                  "epoch": {
+                    "type": "integer"
+                  },
+                  "machine_id": {
+                    "type": "string"
+                  },
+                  "model_id": {
+                    "type": "string"
+                  },
+                  "signing_pub_key": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "creation_time",
+                  "encryption_pub_key",
+                  "epoch",
+                  "machine_id",
+                  "model_id",
+                  "signing_pub_key"
+                ]
+              },
+              "stableInfo": {
+                "type": "object",
+                "properties": {
+                  "clock": {
+                    "type": "integer"
+                  },
+                  "device_name": {
+                    "type": "string"
+                  },
+                  "flexible_policy_hash": {
+                    "type": "string"
+                  },
+                  "flexible_policy_version": {
+                    "type": "integer"
+                  },
+                  "frozen_policy_hash": {
+                    "type": "string"
+                  },
+                  "frozen_policy_version": {
+                    "type": "integer"
+                  },
+                  "isInheritedAccount": {
+                    "type": "boolean"
+                  },
+                  "os_version": {
+                    "type": "string"
+                  },
+                  "secureElementIdentity": {
+                    "type": "object",
+                    "properties": {
+                      "peerData": {
+                        "type": "string"
+                      },
+                      "peerIdentifier": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "peerData",
+                      "peerIdentifier"
+                    ]
+                  },
+                  "serial_number": {
+                    "type": "string"
+                  },
+                  "user_controllable_view_status": {
+                    "type": "string"
+                  },
+                  "walrus": {
+                    "type": "object",
+                    "properties": {
+                      "clock": {
+                        "type": "integer"
+                      },
+                      "value": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "clock",
+                      "value"
+                    ]
+                  },
+                  "web_access": {
+                    "type": "object",
+                    "properties": {
+                      "clock": {
+                        "type": "integer"
+                      },
+                      "value": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "clock",
+                      "value"
+                    ]
+                  },
+                  "supportsRepudiation": {
+                    "type": "boolean"
+                  },
+                  "recovery_encryption_public_key": {
+                    "type": "string"
+                  },
+                  "recovery_signing_public_key": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "clock",
+                  "device_name",
+                  "flexible_policy_hash",
+                  "flexible_policy_version",
+                  "frozen_policy_hash",
+                  "frozen_policy_version",
+                  "isInheritedAccount",
+                  "os_version",
+                  "serial_number",
+                  "user_controllable_view_status",
+                  "walrus",
+                  "web_access"
+                ]
+              }
+            },
+            "required": [
+              "dynamicInfo",
+              "peerID",
+              "permanentInfo",
+              "stableInfo"
+            ]
+          }
+        },
+        "registeredPolicyVersions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "self": {
+          "type": "object",
+          "properties": {
+            "dynamicInfo": {
+              "type": "object",
+              "properties": {
+                "clock": {
+                  "type": "integer"
+                },
+                "dispositions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "disposition": {
+                        "type": "object",
+                        "properties": {
+                          "disallowedMachineID": {
+                            "type": "object"
+                          },
+                          "unknownMachineID": {
+                            "type": "object"
+                          },
+                          "unknownReasonRemovalMachineID": {
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "disallowedMachineID"
+                        ]
+                      },
+                      "peerID": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "disposition",
+                      "peerID"
+                    ]
+                  }
+                },
+                "excluded": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "included": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "clock",
+                "dispositions",
+                "excluded",
+                "included"
+              ]
+            },
+            "peerID": {
+              "type": "string"
+            },
+            "permanentInfo": {
+              "type": "object",
+              "properties": {
+                "creation_time": {
+                  "type": "integer"
+                },
+                "encryption_pub_key": {
+                  "type": "string"
+                },
+                "epoch": {
+                  "type": "integer"
+                },
+                "machine_id": {
+                  "type": "string"
+                },
+                "model_id": {
+                  "type": "string"
+                },
+                "signing_pub_key": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "creation_time",
+                "encryption_pub_key",
+                "epoch",
+                "machine_id",
+                "model_id",
+                "signing_pub_key"
+              ]
+            },
+            "stableInfo": {
+              "type": "object",
+              "properties": {
+                "clock": {
+                  "type": "integer"
+                },
+                "flexible_policy_hash": {
+                  "type": "string"
+                },
+                "flexible_policy_version": {
+                  "type": "integer"
+                },
+                "frozen_policy_hash": {
+                  "type": "string"
+                },
+                "frozen_policy_version": {
+                  "type": "integer"
+                },
+                "isInheritedAccount": {
+                  "type": "boolean"
+                },
+                "os_version": {
+                  "type": "string"
+                },
+                "secureElementIdentity": {
+                  "type": "object",
+                  "properties": {
+                    "peerData": {
+                      "type": "string"
+                    },
+                    "peerIdentifier": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "peerData",
+                    "peerIdentifier"
+                  ]
+                },
+                "serial_number": {
+                  "type": "string"
+                },
+                "supportsRepudiation": {
+                  "type": "boolean"
+                },
+                "user_controllable_view_status": {
+                  "type": "string"
+                },
+                "walrus": {
+                  "type": "object",
+                  "properties": {
+                    "clock": {
+                      "type": "integer"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "clock",
+                    "value"
+                  ]
+                },
+                "web_access": {
+                  "type": "object",
+                  "properties": {
+                    "clock": {
+                      "type": "integer"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "clock",
+                    "value"
+                  ]
+                }
+              },
+              "required": [
+                "clock",
+                "flexible_policy_hash",
+                "flexible_policy_version",
+                "frozen_policy_hash",
+                "frozen_policy_version",
+                "isInheritedAccount",
+                "os_version",
+                "secureElementIdentity",
+                "serial_number",
+                "supportsRepudiation",
+                "user_controllable_view_status",
+                "walrus",
+                "web_access"
+              ]
+            }
+          },
+          "required": [
+            "dynamicInfo",
+            "peerID",
+            "permanentInfo",
+            "stableInfo"
+          ]
+        },
+        "vouchers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "beneficiary": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "sponsor": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "beneficiary",
+              "reason",
+              "sponsor"
+            ]
+          }
+        }
+      },
+      "required": [
+        "accountSettings",
+        "accountSettingsDate",
+        "bottles",
+        "custodian_recovery_keys",
+        "distrustedEgoSponsoredBeneficiaryIDs",
+        "egoSponsoredBeneficiaryIDs",
+        "honorIDMSListChanges",
+        "idmsTrustedDeviceListFetchDate",
+        "idmsTrustedDevicesVersion",
+        "machineIDsAllowed",
+        "machineIDsDisallowed",
+        "machineIDsEvicted",
+        "machineIDsGhostedFromTDL",
+        "machineIDsUnknownReason",
+        "peers",
+        "registeredPolicyVersions",
+        "self",
+        "vouchers"
+      ]
+    },
+    "contextID": {
+      "type": "string"
+    },
+    "CoreFollowUp": {
+      "type": "object",
+      "properties": {
+        "60fa58c61fd49f78cc6895a3eae55807": {
+          "type": "string"
+        },
+        "com.apple.SoftwareUpdateServices.followup": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "60fa58c61fd49f78cc6895a3eae55807",
+        "com.apple.SoftwareUpdateServices.followup"
+      ]
+    },
+    "escrowRepairAttemptVersion": {
+      "type": "integer"
+    },
+    "escrowRequest": {
+      "type": "object"
+    },
+    "lastEscrowRepairAttempted": {
+      "type": "string"
+    },
+    "lastEscrowRepairTriggered": {
+      "type": "string"
+    },
+    "lastOctagonPush": {
+      "type": "string"
+    },
+    "memoizedAccountState": {
+      "type": "integer"
+    },
+    "memoizedCDPStatus": {
+      "type": "integer"
+    },
+    "memoizedlastHealthCheck": {
+      "type": "string"
+    },
+    "memoizedTrustState": {
+      "type": "integer"
+    },
+    "octagonLaunchSeqence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pushEnvironments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state": {
+      "type": "string"
+    },
+    "stateFlags": {
+      "type": "array"
+    },
+    "statePendingFlags": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "CoreFollowUp",
+    "activeAccount",
+    "containerName",
+    "contextDump",
+    "contextID",
+    "escrowRepairAttemptVersion",
+    "escrowRequest",
+    "lastEscrowRepairAttempted",
+    "lastEscrowRepairTriggered",
+    "lastOctagonPush",
+    "memoizedAccountState",
+    "memoizedCDPStatus",
+    "memoizedTrustState",
+    "memoizedlastHealthCheck",
+    "octagonLaunchSeqence",
+    "pushEnvironments",
+    "state",
+    "stateFlags",
+    "statePendingFlags"
+  ]
+}

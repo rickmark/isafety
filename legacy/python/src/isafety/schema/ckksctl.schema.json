@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "ckksManaged": {
+          "type": "string"
+        },
+        "ckmirror": {
+          "type": "object",
+          "properties": {
+            "379A6CEB-EE66-4072-88B9-0AB3B708D045": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "379A6CEB-EE66-4072-88B9-0AB3B708D045"
+          ]
+        },
+        "currentClassA": {
+          "type": "string"
+        },
+        "currentClassAPtr": {
+          "type": "string"
+        },
+        "currentClassC": {
+          "type": "string"
+        },
+        "currentClassCPtr": {
+          "type": "string"
+        },
+        "currentTLK": {
+          "type": "string"
+        },
+        "currentTLKPtr": {
+          "type": "string"
+        },
+        "devicestates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "initialSyncFinished": {
+          "type": "string"
+        },
+        "iqe": {
+          "type": "object"
+        },
+        "itemsyncing": {
+          "type": "string"
+        },
+        "keys": {
+          "type": "object",
+          "properties": {
+            "local-classA": {
+              "type": "integer"
+            },
+            "local-classC": {
+              "type": "integer"
+            },
+            "local-tlk": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "local-classA",
+            "local-classC",
+            "local-tlk"
+          ]
+        },
+        "keystate": {
+          "type": "string"
+        },
+        "launchSequence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "oqe": {
+          "type": "object"
+        },
+        "statusError": {
+          "type": "null"
+        },
+        "tlkshares": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "view": {
+          "type": "string"
+        },
+        "zoneCreated": {
+          "type": "string"
+        },
+        "zoneSubscribed": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ckksManaged",
+        "ckmirror",
+        "currentClassA",
+        "currentClassAPtr",
+        "currentClassC",
+        "currentClassCPtr",
+        "currentTLK",
+        "currentTLKPtr",
+        "devicestates",
+        "initialSyncFinished",
+        "iqe",
+        "itemsyncing",
+        "keys",
+        "keystate",
+        "launchSequence",
+        "oqe",
+        "statusError",
+        "tlkshares",
+        "view",
+        "zoneCreated",
+        "zoneSubscribed"
+      ]
+    },
+      "propertyNames": {
+        "enum": [
+          "ApplePay",
+          "Applications",
+          "AutoUnlock",
+          "Backstop",
+          "Contacts",
+          "CreditCards",
+          "DevicePairing",
+          "Engram",
+          "FindMy",
+          "Groups",
+          "Health",
+          "Home",
+          "LimitedPeersAllowed",
+          "MFi",
+          "Mail",
+          "Manatee",
+          "Passwords",
+          "Photos",
+          "ProtectedCloudStorage",
+          "SE-PTA",
+          "SE-PTC",
+          "SecureObjectSync",
+          "WiFi",
+          "global"
+        ]
+      }
+    }
+  },
+  "required": [
+    "status"
+  ]
+}

@@ -130,3 +130,9 @@ dmypy.json
 
 
 .idea/
+
+# Native app and Rust build products
+target/
+macos/.build/
+macos/.swiftpm/
+.DS_Store

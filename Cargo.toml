@@ -1,0 +1,21 @@
+[workspace]
+members = ["crates/ibackup", "crates/isafety-core"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+
+[workspace.dependencies]
+plist = "1.7"
+rusqlite = { version = "0.37", features = ["bundled", "serialize"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+zeroize = { version = "1", features = ["derive"] }
+
+[profile.release]
+lto = "thin"
+# Xcode 27's linker can emit unloadable proc-macro dylibs when Rust strips them.
+strip = "none"
